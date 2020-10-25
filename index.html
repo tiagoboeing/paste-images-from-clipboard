@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div style="margin: 20px 0;">
+      <button onClick="startListener('base64')">Start base64 listener</button>
+      <button onClick="startListener('blob')">Start Blob listener</button>
+    </div>
+
+    <div>
+      See console to base64 mode
+    </div>
+
+    <div>
+      <canvas id="my-image" style="border: 1px solid antiquewhite;"> </canvas>
+    </div>
+
+    <script>
+      var canvas = document.getElementById("my-image");
+      var ctx = canvas.getContext("2d");
+
+      ctx.font = "14px Arial";
+      ctx.fillText("Paste a image from clipboard", 50, 75);
+
+      startListener = (mode) => {
+        CLIPBOARD.init(mode);
+        document.removeEventListener("pasteFromClipboard", null, true);
+
+        // capture on e.detail
+        document.addEventListener("pasteFromClipboard", (e) => {
+          console.log("Event", e);
+        });
+      };
+    </script>
+  </body>
+</html>
