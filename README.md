@@ -11,7 +11,7 @@ Inspired on [Our Code World](http://ourcodeworld.com/articles/read/491/how-to-re
 
 ## Use
 
-Create a `.js` file and copy the content from `script.js` to your project.
+Create a `.js` file and copy the content from [`script.js`](script.js) to your project.
 
 In your HTML page, import the script:
 
