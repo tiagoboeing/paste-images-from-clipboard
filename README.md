@@ -39,7 +39,7 @@ document.addEventListener('pasteFromClipboard', e => {
 
 The listener returns:
 
-```json
+```js
 {
   "bubbles": false,
   "cancelBubble": false,
