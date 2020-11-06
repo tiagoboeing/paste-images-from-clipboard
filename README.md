@@ -8,8 +8,8 @@ Inspired on [Our Code World](http://ourcodeworld.com/articles/read/491/how-to-re
 
 | Mode     | Implemented |
 | -------- | ----------- |
-| `blob`   | ✅ Yes       |
-| `base64` | ✅ Yes       |
+| `blob`   | Yes         |
+| `base64` | Yes         |
 
 ## Use
 
